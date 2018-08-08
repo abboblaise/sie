@@ -1,0 +1,101 @@
+services:
+#    saleka_bibliotheque.example:
+#        class: Saleka\BibliothequeBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    saleka_bibliotheque.admin.categorie:
+        class: Saleka\BibliothequeBundle\Admin\CategorieAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Categorie, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Categorie }
+        public: true
+
+    saleka_bibliotheque.admin.mot_cle:
+        class: Saleka\BibliothequeBundle\Admin\MotCleAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\MotCle, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: MotCle }
+        public: true
+
+    saleka_bibliotheque.admin.oeuvre:
+        class: Saleka\BibliothequeBundle\Admin\OeuvreAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Oeuvre, SalekaBibliothequeBundle:OeuvreAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Oeuvre }
+        public: true
+
+    saleka_bibliotheque.admin.auteur:
+        class: Saleka\BibliothequeBundle\Admin\AuteurAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Auteur, SalekaBibliothequeBundle:AuteurAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Auteur }
+        public: true
+
+    saleka_bibliotheque.admin.participer:
+        class: Saleka\BibliothequeBundle\Admin\ParticiperAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Participer, SalekaBibliothequeBundle:ParticiperAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Participer }
+        public: true
+
+    saleka_bibliotheque.admin.editeur:
+        class: Saleka\BibliothequeBundle\Admin\EditeurAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Editeur, SalekaBibliothequeBundle:EditeurAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Editeur }
+        public: true
+
+    saleka_bibliotheque.admin.nature_edition:
+        class: Saleka\BibliothequeBundle\Admin\NatureEditionAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\NatureEdition, SalekaBibliothequeBundle:NatureEditionAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: NatureEdition }
+        public: true
+
+    saleka_bibliotheque.admin.edition:
+        class: Saleka\BibliothequeBundle\Admin\EditionAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Edition, SalekaBibliothequeBundle:EditionAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Edition }
+        public: true
+
+    saleka_bibliotheque.admin.collection:
+        class: Saleka\BibliothequeBundle\Admin\CollectionAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Collection, SalekaBibliothequeBundle:CollectionAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Collection }
+        public: true
+
+    saleka_bibliotheque.admin.format_edition:
+        class: Saleka\BibliothequeBundle\Admin\FormatEditionAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\FormatEdition, SalekaBibliothequeBundle:FormatEditionAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: FormatEdition }
+        public: true
+
+    saleka_bibliotheque.admin.lecteur:
+        class: Saleka\BibliothequeBundle\Admin\LecteurAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Lecteur, SalekaBibliothequeBundle:LecteurAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Lecteur }
+        public: true
+
+    saleka_bibliotheque.admin.oeuvre_edition:
+        class: Saleka\BibliothequeBundle\Admin\OeuvreEditionAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\OeuvreEdition, SalekaBibliothequeBundle:OeuvreEditionAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: OeuvreEdition }
+        public: true
+
+    saleka_bibliotheque.admin.fichier:
+        class: Saleka\BibliothequeBundle\Admin\FichierAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Fichier, SalekaBibliothequeBundle:FichierAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Fichier }
+        public: true
+
+    saleka_bibliotheque.admin.lire:
+        class: Saleka\BibliothequeBundle\Admin\LireAdmin
+        arguments: [~, Saleka\BibliothequeBundle\Entity\Lire, SalekaBibliothequeBundle:LireAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Lire }
+        public: true

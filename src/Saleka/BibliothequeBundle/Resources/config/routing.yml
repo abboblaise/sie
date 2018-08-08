@@ -1,0 +1,3 @@
+saleka_bibliotheque_homepage:
+    path:     /
+    defaults: { _controller: SalekaBibliothequeBundle:Default:index }
